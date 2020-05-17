@@ -2,12 +2,16 @@ import React from 'react';
 import NavBar from './components/NavBar'
 import './App.css';
 import ButtonSwitch from './components/ButtonSwitch'
+import  DisplayPage from './components/DisplayPage' 
+
 
 function App() {
+
   return (
-    <div className="App">
+    <div style={{ background: '#f3e5f5' }}>
       <NavBar />
-      <ButtonSwitch/>
+        <ButtonSwitch/>
+          <DisplayPage/>
     </div>
   );
 }

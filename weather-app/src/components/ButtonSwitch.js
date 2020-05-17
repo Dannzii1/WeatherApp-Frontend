@@ -1,14 +1,19 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
 import { makeStyles } from '@material-ui/core/styles';
+import WavesRoundedIcon from '@material-ui/icons/WavesRounded';
+import CloudSharpIcon from '@material-ui/icons/CloudSharp';
+import AcUnitRoundedIcon from '@material-ui/icons/AcUnitRounded';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 
 const useStyles = makeStyles((theme) => ({
     root: {
       display: 'flex',
-      alignItems: 'right',
+      justifyContent: 'center',
+      flexDirection: 'column',
+      alignItems: 'center',
       '& > *': {
-        margin: theme.spacing(10),
+        margin: theme.spacing(2),
       },
     },
   }));
@@ -21,14 +26,14 @@ export default function Buttongroup(){
 
     return(
         <div className={Buttons.root}>
-            <ButtonGroup  variant="text" color="primary" aria-label="text primary button group">
-                <Button>
+            <ButtonGroup color="primary" aria-label="outlined primary button group">
+                <Button startIcon={<AcUnitRoundedIcon />}>
                     Temprature
                 </Button>
-                <Button>
+                <Button startIcon={<WavesRoundedIcon />}>
                     Wind Speed
                 </Button>
-                <Button>
+                <Button startIcon={<CloudSharpIcon />}>
                     Cloud Forecast
                 </Button>
             </ButtonGroup>
